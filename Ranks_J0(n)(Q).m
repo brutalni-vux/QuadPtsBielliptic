@@ -1,6 +1,6 @@
 //this code was written by us, although some of this info is already known
 //see https://wstein.org/edu/Fall2003/252/references/magma/ModSym.pdf for info about modular symbols package
-//primary tool is Kolyvagin-Logachev theorem
+//if possible, this code determines rk(J0(N)(Q)) for all N in Ns using Kolyvagin-Logachev theorem
 
 Ns := [60, 62, 69, 79, 83, 89, 92, 94, 95, 101, 119, 131];
 
