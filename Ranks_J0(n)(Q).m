@@ -11,6 +11,7 @@ for i in [1..#Ns] do
     l := NewformDecomposition(M);
 
     rk := 0;
+    provable := true;
 
     "There are ", #l, " Galois orbits of Hecke eigenforms.";
     "";
@@ -22,13 +23,22 @@ for i in [1..#Ns] do
         else 
             coef, ord := LSeriesLeadingCoefficient(l[j], 1, 20);
             "Order of vanishing of L(f_",j,", 1) is ", ord;
-            "By Kolyvagin-Logachev: r(A_f_",j,") = ", Degree(HeckeEigenvalueField(l[j]));
-            rk := rk + Degree(HeckeEigenvalueField(l[j]));
+            if ord eq 1 then
+                "By Kolyvagin-Logachev: r(A_f_",j,") = ", Degree(HeckeEigenvalueField(l[j]));
+                rk := rk + Degree(HeckeEigenvalueField(l[j]));
+            else
+                "We can't use Kolyvagin-Logachev to determine r(A_f_",j,").";
+                provable := false;
+            end if;
         end if;
         "";
   
     end for;
-    "That proves that r(J0(", Ns[i], ")(Q)) = ",rk,".";
+    if provable then
+        "That proves that r(J0(", Ns[i], ")(Q)) = ",rk,".";
+    else
+        "We were unable to provably determine r(J0(", Ns[i], ")(Q))";
+    end if;
     "---------------";
     "";
 end for;
