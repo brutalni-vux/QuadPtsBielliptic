@@ -56,13 +56,7 @@ eqns:=[R | ];
 
 	X:=Curve(ProjectiveSpace(R),eqns); // Our model for X_0(N) discovered via the canonical embedding.
 	assert Genus(X) eq dim;
-	
-	//for N == 95 this takes too much time and memory
-	if N ne 95 then
-		assert IsSingular(X) eq false;
-	end if;
-
-    	indexGam:=N*&*[Rationals() | 1+1/p : p in PrimeDivisors(N)];	
+    	indexGam:=N*&*[Rationals() | 1+1/p : p in PrimeDivisors(N)];
 	indexGam:=Integers()!indexGam; // Index of Gamma_0(N) in SL_2(Z)
 	for eqn in eqns do
 		eqnScaled:=LCM([Denominator(c) : c in Coefficients(eqn)])*eqn;
