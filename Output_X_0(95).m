@@ -1,4 +1,4 @@
-Magma V2.26-3     Fri Nov 12 2021 20:12:32 on euler    [Seed = 2641510470]
+Magma V2.26-3     Fri Nov 12 2021 22:26:02 on euler    [Seed = 3744490788]
 Type ? for help.  Type <Ctrl>-D to quit.
 Loading "quadptssieve.m"
 Loading "ozmansiksek.m"
@@ -79,7 +79,7 @@ By finding poles of j-map, we find that we have these 4 cusps:
     Place at (1 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0)
 ]
 
-One quadratic but not rational poit is P5: (1/14*(-r19 - 17) : 1/7*(r19 - 11) : 
+One quadratic but not rational point is P5: (1/14*(-r19 - 17) : 1/7*(r19 - 11) :
 1/7*(r19 + 3) : 1/7*(r19 - 4) : 1/14*(r19 + 3) : 1 : 0 : 0 : 0)
 Is P5 fixed by w19?
 true
@@ -161,5 +161,38 @@ succeeded, number otherwise)
 11
 true
 
+Hence, there are no quadratic points on X0(95) not coming from X0(95)/w19(Q).
+We now have to find rational points on X0(95)/w19(Q) and check their pullbacks.
 
-Total time: 706.179 seconds, Total memory usage: 233.97MB
+X0(95)/w19 is actually  Hyperelliptic Curve defined by y^2 = x^8 - 2*x^7 - 7*x^6
+    + 16*x^5 - 2*x^4 - 2*x^3 - 4*x^2 + 5 over Rational Field
+Rank of J(X0(95)/w19)(Q) is 0
+Hence rk(J(X0(95)/w19)(Q)) = rk(J0(95)(Q)) = 0.
+
+J(X0(95)/w19)(Q)_tors has at most  20  points.
+We have found  20  points on J(X0(95)/w19)(Q) out of possible  20
+Hence, we know whole J(X0(95)/w19)(Q).
+
+Using Mumford representations, we get that x coordinates of all rational
+plus non-obvious quadratic points on X0(95)/w19 are (excluding pts at infinity):
+1/2*(w + 1)
+1/2*(-w + 1)
+1/2*(-w + 3)
+1/2*(w + 3)
+Hence, only rational points are points at infinity
+
+Pullback of point  (1 : -1 : 0)  is:
+[
+    <Place at (-3/5 : 0 : -2/5 : -1/5 : -1/5 : -1/5 : 1 : 0 : 0), 1>,
+    <Place at (3/5 : 0 : 2/5 : 1/5 : 1/5 : 1/5 : 1 : 0 : 0), 1>
+]
+Pullback of point  (1 : 1 : 0)  is:
+[
+    <Place at (-1 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0), 1>,
+    <Place at (1 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0), 1>
+]
+Hence, the only quadratic point up to Galois conjugacy, apart from rational 
+cusps, is  (1/14*(-r19 - 17) : 1/7*(r19 - 11) : 1/7*(r19 + 3) : 1/7*(r19 - 4) : 
+1/14*(r19 + 3) : 1 : 0 : 0 : 0)
+
+Total time: 703.000 seconds, Total memory usage: 233.97MB

@@ -55,7 +55,7 @@ Poles(jMap);
 P5:=X95(K19)![1/14*(-r19-17), 1/7*(r19-11), 1/7*(r19+3), 1/7*(r19-4), 1/14*(r19+3),1,0,0,0];
 P6:=X95(K19)![1/14*(r19-17), 1/7*(-r19-11), 1/7*(-r19+3), 1/7*(-r19-4), 1/14*(-r19+3),1,0,0,0];
 
-"One quadratic but not rational poit is P5:", P5;
+"One quadratic but not rational point is P5:", P5;
 "Is P5 fixed by w19?";
 w19(P5) eq P5;
 "Hence, P5 can't come from a pullback of rational point.";
@@ -162,20 +162,61 @@ bret;
 assert bret eq true;
 "";
 
-/*
-_<x>:=PolynomialRing(Rationals());
-C:=HyperellipticCurve(x^8 - 2*x^7 - 7*x^6 + 16*x^5 - 2*x^4 -2*x^3 - 4*x^2 + 5);
-K<w>:=QuadraticField(5);
-X:=ChangeRing(C,K);
-P1:=PointsAtInfinity(X)[1];
-P2:=PointsAtInfinity(X)[2];
-P3:=X![1/2*(-w + 3), 1/2*(5*w - 7)];
-P4:=X![1/2*(w + 3), 1/2*(-5*w - 7)];
-D1:=P1-P2;
-D2:=(P3-P1)+(P4-P2);
-S:={};
-for i:=1 to 10 do for j:=1 to 10 do S:=S join {i*D1+j*D2}; end for; end for;
-#S;
+"Hence, there are no quadratic points on X0(95) not coming from X0(95)/w19(Q).";
+"We now have to find rational points on X0(95)/w19(Q) and check their pullbacks.";
+"";
 
-for a in S do R:=R join SequenceToSet(Roots(a[1])); end for;
-*/
+Hyp, mp := SimplifiedModel(X95w19);
+"X0(95)/w19 is actually ", Hyp;
+
+"Rank of J(X0(95)/w19)(Q) is", RankBound(Jacobian(Hyp));
+"Hence rk(J(X0(95)/w19)(Q)) = rk(J0(95)(Q)) = 0.";
+"";
+
+ptsMax := #Jacobian(ChangeRing(Hyp, GF(3)));
+"J(X0(95)/w19)(Q)_tors has at most ", ptsMax, " points.";
+
+K5<w> := QuadraticField(5);
+Hyp5:=ChangeRing(Hyp, K5);
+
+Inf1 := PointsAtInfinity(Hyp5)[1];
+Inf2 := PointsAtInfinity(Hyp5)[2];
+Quad1 := Hyp5![1/2*(-w + 3), 1/2*(5*w - 7)];
+Quad2 := Hyp5![1/2*(w + 3), 1/2*(-5*w - 7)];
+
+Div1 := Inf1 - Inf2;
+Div2 := (Quad1 - Inf1) + (Quad2 - Inf2);
+
+S := {};
+
+for i := 1 to 10 do
+	for j := 1 to 10 do
+		S := S join {i*Div1 + j*Div2};
+	end for;
+end for;
+
+"We have found ", #S, " points on J(X0(95)/w19)(Q) out of possible ", ptsMax;
+assert #S eq ptsMax;
+"Hence, we know whole J(X0(95)/w19)(Q).";
+"";
+
+R:={};
+for a in S do
+	R:=R join SequenceToSet(Roots(a[1]));
+end for;
+
+"Using Mumford representations, we get that x coordinates of all rational";
+"plus non-obvious quadratic points on X0(95)/w19 are (excluding pts at infinity):";
+
+for rt in R do
+	rt[1];
+end for;
+
+"Hence, only rational points are points at infinity";
+"";
+for i in [1..#PointsAtInfinity(Hyp)] do
+	"Pullback of point ", PointsAtInfinity(Hyp)[i], " is:";
+	Decomposition(Pullback(quotMap*mp, Place(PointsAtInfinity(Hyp)[i])));
+end for;
+
+"Hence, the only quadratic point up to Galois conjugacy, apart from rational cusps, is ", P5;
