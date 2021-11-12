@@ -1,4 +1,4 @@
-Magma V2.26-3     Fri Nov 12 2021 17:47:02 on euler    [Seed = 1135392954]
+Magma V2.26-3     Fri Nov 12 2021 18:27:36 on euler    [Seed = 903540855]
 Type ? for help.  Type <Ctrl>-D to quit.
 Loading "quadptssieve.m"
 Loading "ozmansiksek.m"
@@ -44,6 +44,7 @@ u[5]
 u[6]
 -u[7]
 
+Genus of X0(60) is  7
 Genus of X0(60)/w15 is  1
 
 By finding poles of j-map, we find that we have these 12 cusps (P1, ..., P12):
@@ -187,7 +188,7 @@ This shows that J0(60)(Q)_tors can't have an element of order 48.
 By the previous information and with rk(J0(60)(Q)) = 0, we conclude J0(60)(Q) ==
 Z/4Z + (Z/24Z)^3
 
-We have found  78  degree 2 points.
+We have found  78  points on X_0(60)^2(Q).
 6 of them are pullbacks of rationals from X0(60)/w15.
 72 of them are non-pullbacks
 7
@@ -253,4 +254,4 @@ Pullback of point  (1 : -1 : 1)  is:
 
 Hence, there are no new quadratic points on X0(60) coming from X0(60)/w15(Q).
 
-Total time: 1397.160 seconds, Total memory usage: 1736.44MB
+Total time: 1395.940 seconds, Total memory usage: 1736.44MB

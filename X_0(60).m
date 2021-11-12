@@ -38,6 +38,7 @@ w15;
 "";
 
 X60w15,quotMap15:=CurveQuotient(AutomorphismGroup(X60,[w15]));
+"Genus of X0(60) is ", Genus(X60);
 "Genus of X0(60)/w15 is ", Genus(X60w15);
 "";
 
@@ -191,7 +192,7 @@ end for;
 
 deg2npb:=[DD : DD in deg2 | not DD in deg2pb];
 
-"We have found ", #deg2, " degree 2 points.";
+"We have found ", #deg2, " points on X_0(60)^2(Q).";
 #deg2pb, "of them are pullbacks of rationals from X0(60)/w15.";
 #deg2npb, "of them are non-pullbacks";
 
@@ -210,6 +211,7 @@ primes := [7, 13];
 bret := MWSieve(deg2, primes, X60, A, divs, auts, genusC, deg2pb, deg2npb, I, bp);
 "Succeeded in proving that we have found all exceptional quadratic pts? (true if succeeded, number otherwise)";
 bret;
+assert bret eq true;
 
 "Hence, there are no quadratic points on X0(60) not coming from X0(60)/w15(Q).";
 "We now have to find rational points on X0(60)/w15(Q) and check their pullbacks.";
