@@ -96,9 +96,9 @@ CG,phi,psi:=ClassGroup(X7);
 Z:=FreeAbelianGroup(1);
 degr:=hom<CG->Z | [ Degree(phi(a))*Z.1 : a in OrderedGenerators(CG)]>;
 JF7:=Kernel(degr); // This is isomorphic to J_X(\F_7).
-"J(Q)_tor is isomorphic to a subgroup of:";
+"J0(95)(Q)_tor is isomorphic to a subgroup of:";
 JF7;
-"Hence, J(Q)_tor doesn't have two independent elements of order 4.";
+"Hence, J0(95)(Q)_tor doesn't have two independent elements of order 4.";
 "";
 
 X11:=ChangeRing(X95,GF(11));
@@ -106,13 +106,13 @@ CG,phi,psi:=ClassGroup(X11);
 Z:=FreeAbelianGroup(1);
 degr:=hom<CG->Z | [ Degree(phi(a))*Z.1 : a in OrderedGenerators(CG)]>;
 JF11:=Kernel(degr); // This is isomorphic to J_X(\F_11).
-"J(Q)_tor is isomorphic to a subgroup of:";
+"J0(95)(Q)_tor is isomorphic to a subgroup of:";
 JF11;
-"Hence, J(Q)_tor doesn't have two independent elements of order 10.";
+"Hence, J0(95)(Q)_tor doesn't have two independent elements of order 10.";
 "";
 
 "Since we have found a torsion subgroup iso. to Z/6Z + Z/180Z, and rk(J0(95)(Q)) == 0,";
-"we know that J(Q) is a subgroup of:";
+"we know that J0(95)(Q) is a subgroup of:";
 "Z/2Z + Z/2Z + Z/6Z + Z/180Z";
 "";
 
