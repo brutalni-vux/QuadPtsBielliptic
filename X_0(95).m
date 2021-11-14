@@ -205,7 +205,7 @@ for a in S do
 	R:=R join SequenceToSet(Roots(a[1]));
 end for;
 
-"Using Mumford representations, we get that x coordinates of all rational";
+"Using Mumford representations, we get that x coordinates of all Q(sqrt(5))-rational";
 "plus non-obvious quadratic points on X0(95)/w19 are (excluding pts at infinity):";
 
 for rt in R do
