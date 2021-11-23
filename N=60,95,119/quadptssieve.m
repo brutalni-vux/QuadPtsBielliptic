@@ -1,6 +1,6 @@
 load "ozmansiksek.m";
 //B. Vukorepa: from this comment down, this file is exactly the same as in Box's article:
-//QUADRATIC POINTS ON MODULAR CURVES WITH INFINITEMORDELL–WEIL GROUP
+//QUADRATIC POINTS ON MODULAR CURVES WITH INFINITEMORDELLâ€“WEIL GROUP
 
 //MORDELL-WEIL SIEVE FOR QUADRATIC POINTS
 
