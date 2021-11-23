@@ -167,10 +167,6 @@ We have found  12  points on X_0(119)^2(Q).
 Succeeded in proving that we have all exceptional quadratic pts? (true if 
 succeeded, number otherwise)
 true
-
->> assert bret eq ture;
-                  ^
-User error: Identifier 'ture' has not been declared or assigned
 This means we have found all exceptional quadratic points on X0(119).
 Now we only need to find rational points on X0(119)/w17 and check their 
 pullbacks.
