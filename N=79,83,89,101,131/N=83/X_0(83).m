@@ -103,6 +103,8 @@ primes:=[3,5,7,11,13,17,19,23];
 B0, iA0 := sub<A | A.1>;
 
 //leaving out representative 0 on purpose, we want to eliminate all others
+//if MWSieve() returns true, that will mean that 2[Q-bp] must be in the B0-coset of 0
+//equivalently, that will mean that 2[Q-bp] = kD1, which is fixed by w83 since D1 is a pullback
 W0 := {a*A.2 : a in [1..40]};
 
 bret := MWSieve(X83, w83Matrix, genusC, primes, A, divs, I, bp, B0, iA0, W0, deg2);
