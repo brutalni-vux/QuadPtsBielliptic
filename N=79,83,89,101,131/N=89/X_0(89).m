@@ -105,6 +105,8 @@ W0 := {a*A.2 : a in [0..21]};
 
 B, iA, W := MWSieve(X89, w89Matrix, genusC, primes, A, divs, I, bp, B0, iA0, W0, deg2);
 
+//the goal is to get that 2[Q - bp] == 2k*D1, if sieve returned B and W such that
+//B and W both consist of elements of the form 2kD1, that goal will be proved
 "";
 "Is it true that for unknown Q in X0(89)^2(\Q) we have 2[Q - bp] == 2k*D1?";
 (B subset sub<A | 2*A.1>) and (Seqset(W) subset sub<A | 2*A.1>);
