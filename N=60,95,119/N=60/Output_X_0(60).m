@@ -191,7 +191,6 @@ Z/4Z + (Z/24Z)^3
 We have found  78  points on X_0(60)^2(Q).
 6 of them are pullbacks of rationals from X0(60)/w15.
 72 of them are non-pullbacks
-7
 13
 13
 Succeeded in proving that we have found all exceptional quadratic pts? (true if 
