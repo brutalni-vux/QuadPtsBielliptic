@@ -1,5 +1,4 @@
 load "X0p_NiceModel.m";
-load "Chabauty_MWSieve_131.m";
 
 //compute model for X_0(131) using the diagonal cuspform basis (such that the Atkin-Lehner matrix is diagonal)
 
