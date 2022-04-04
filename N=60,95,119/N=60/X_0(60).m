@@ -206,7 +206,7 @@ bp := deg2pb[1];
 //divs == A == J(60)(Q)_tors, hence I = 1
 I:=1;
 
-primes := [7, 13];
+primes := [13];
 
 bret := MWSieve(deg2, primes, X60, A, divs, auts, genusC, deg2pb, deg2npb, I, bp);
 "Succeeded in proving that we have found all exceptional quadratic pts? (true if succeeded, number otherwise)";
