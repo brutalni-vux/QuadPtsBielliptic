@@ -1,8 +1,6 @@
 Magma V2.26-3     Mon Apr  4 2022 19:16:45 on euler    [Seed = 2158609775]
 Type ? for help.  Type <Ctrl>-D to quit.
 Loading "X0p_NiceModel.m"
-Loading "Chabauty_MWSieve_131.m"
-Loading "ChabautyHelp.m"
 Dimension of CuspForms(131) is:  11
 Nice model for X0(131) is:
 Curve over Rational Field defined by
