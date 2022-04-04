@@ -1,8 +1,6 @@
 Magma V2.26-3     Mon Apr  4 2022 19:17:16 on euler    [Seed = 186794241]
 Type ? for help.  Type <Ctrl>-D to quit.
 Loading "X0p_NiceModel.m"
-Loading "Chabauty_MWSieve_131.m"
-Loading "ChabautyHelp.m"
 Dimension of CuspForms(131) is:  11
 Dimesion of eigenspace lambda = 1 for w131 is:  1
 Dimesion of eigenspace lambda = -1 for w131 is:  10
