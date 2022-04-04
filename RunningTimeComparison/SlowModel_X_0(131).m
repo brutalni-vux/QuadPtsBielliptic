@@ -1,5 +1,4 @@
 load "X0p_NiceModel.m";
-load "Chabauty_MWSieve_131.m";
 
 //we compute the model for X_0(131) using the default cuspform basis in Magma
 
