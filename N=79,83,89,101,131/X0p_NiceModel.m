@@ -72,3 +72,17 @@ eqns:=[R | ];
 
 	return X;
 end function;
+
+
+// The function takes a curve X and computes a quotient X/w, where w acts like -1 on the first d coordinates and trivially on the rest
+
+Curve_and_Map := function(X,d);
+	R := AmbientSpace(X);
+	RR<[u]> := CoordinateRing(R);
+	n := Dimension(AmbientSpace(X));
+	P := ProjectiveSpace(Rationals(), d - 1);
+	proj := map<R -> P|[u[i] : i in [1..d]]>;
+	Xwd := proj(X);
+	mp := map<X -> Xwd|[u[i] : i in [1..d]]>;
+	return Xwd, mp;
+end function;
