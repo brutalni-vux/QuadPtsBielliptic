@@ -1,6 +1,8 @@
-Magma V2.26-3     Mon Apr  4 2022 19:17:16 on euler    [Seed = 186794241]
+Magma V2.26-3     Tue Apr 12 2022 21:51:11 on euler    [Seed = 2294231715]
 Type ? for help.  Type <Ctrl>-D to quit.
 Loading "X0p_NiceModel.m"
+Loading "Chabauty_MWSieve_131.m"
+Loading "ChabautyHelp.m"
 Dimension of CuspForms(131) is:  11
 Dimesion of eigenspace lambda = 1 for w131 is:  1
 Dimesion of eigenspace lambda = -1 for w131 is:  10
@@ -88,4 +90,55 @@ x[7]*x[9] - x[8]^2 + 2*x[8]*x[9] - 3*x[8]*x[10] - 4*x[9]^2 + 5*x[9]*x[10] -
     2*x[10]^2,
 x[7]*x[10] - 2*x[8]*x[10] - x[9]^2 + x[9]*x[10] - 2*x[10]^2
 
-Total time: 1.449 seconds, Total memory usage: 32.09MB
+w131 on X131 is given by:
+Mapping from: Crv: X131 to Crv: X131
+with equations : 
+u[1]
+u[2]
+u[3]
+u[4]
+u[5]
+u[6]
+u[7]
+u[8]
+u[9]
+u[10]
+-u[11]
+and inverse
+u[1]
+u[2]
+u[3]
+u[4]
+u[5]
+u[6]
+u[7]
+u[8]
+u[9]
+u[10]
+-u[11]
+
+X0(131)/w131 is actually the following elliptic curve:
+Elliptic Curve defined by y^2 - 4*x*y + 3*y = x^3 - 5*x^2 + 7*x - 2 over 
+Rational Field
+
+Quotient map is:
+Mapping from: Crv: X131 to CrvEll: E
+Composition of Mapping from: Crv: X131 to Crv: X131w131
+with equations : 
+u[1]
+u[2]
+u[3]
+u[4]
+u[5]
+u[6]
+u[7]
+u[8]
+u[9]
+u[10] and
+Mapping from: Crv: X131w131 to CrvEll: E
+with equations : 
+$.9
+$.8
+$.10
+
+Total time: 3.560 seconds, Total memory usage: 32.09MB
