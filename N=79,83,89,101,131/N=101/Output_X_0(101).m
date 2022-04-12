@@ -1,4 +1,4 @@
-Magma V2.26-3     Sun Nov 21 2021 23:45:47 on euler    [Seed = 484946185]
+Magma V2.26-3     Tue Apr 12 2022 21:28:54 on euler    [Seed = 2561615932]
 Type ? for help.  Type <Ctrl>-D to quit.
 Loading "X0p_NiceModel.m"
 Loading "Chabauty_MWSieve.m"
@@ -57,7 +57,6 @@ u[5]
 u[6]
 u[7]
 -u[8]
-
 Genus of X0(101) is  8
 Genus of X0(101)/w101 is  1
 
@@ -67,7 +66,7 @@ We have found these points on X0(101):
 Is Dtor := pts[1] - pts[2] a generator for J0(101)(Q)_tors?  true
 
 X0(101)/w101 is actually the following elliptic curve:
-Elliptic Curve defined by y^2 - 36*x*y + y = x^3 - 326*x^2 + 18*x over Rational 
+Elliptic Curve defined by y^2 + 4*x*y + 7*y = x^3 - 10*x - 12 over Rational 
 Field
 
 It has the following MW group:
@@ -560,4 +559,4 @@ Clearly, none such points are quadratic.
 Hence there are no quadratic points on X0(101) not coming from pullbacks of 
 rationals.
 
-Total time: 6852.239 seconds, Total memory usage: 17744.59MB
+Total time: 246.419 seconds, Total memory usage: 160.22MB
