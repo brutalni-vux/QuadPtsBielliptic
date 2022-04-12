@@ -31,15 +31,17 @@ rows := [[&+[RowSequence(H)[i][j]*u[j] : j in [1..n+1]] : i in [1..n+1]]];
 w101 := iso<X101 -> X101 | rows, rows>;
 "w101 on X101 is given by:";
 w101;
-"";
 
-X101w101, quotMap := CurveQuotient(AutomorphismGroup(X101, [w101]));
+X101w101, quotMap := Curve_and_Map(X101, 7);
 
 "Genus of X0(101) is ", Genus(X101);
 "Genus of X0(101)/w101 is ", Genus(X101w101);
 "";
 
-pts := PointSearch(X101, 2);
+P1 := X101![-1, 0, 0, 0, 0, 0, 0, 1];
+P2 := X101![1, 0, 0, 0, 0, 0, 0, 1];
+
+pts := [P1, P2];
 
 "We have found these points on X0(101):";
 pts;
@@ -103,8 +105,6 @@ primes:=[3,5,7,11,13,17,19,23];
 B0, iA0 := sub<A | A.1>;
 
 //leaving out representative 0 on purpose, we want to eliminate all others
-//if MWSieve() returns true, that will mean that 2[Q-bp] must be in the B0-coset of 0
-//equivalently, that will mean that 2[Q-bp] = kD1, which is fixed by w101 since D1 is a pullback
 W0 := {a*A.2 : a in [1..24]};
 
 bret := MWSieve(X101, w101Matrix, genusC, primes, A, divs, I, bp, B0, iA0, W0, deg2);
